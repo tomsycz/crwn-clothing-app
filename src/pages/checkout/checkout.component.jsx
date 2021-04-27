@@ -1,6 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import { createStructuredSelector } from "reselect";
+import styled from "styled-components";
 
 import CheckoutItem from "../../components/checkout-item/checkout-item.component";
 import StripeCheckoutButton from "../../components/stripe-button/stripe-button.component";
@@ -11,15 +12,20 @@ import {
 } from "./../../redux/cart/cart.selectors";
 import "./checkout.styles.scss";
 
+const HeaderBlock = styled.div`
+  text-transform: capitalize;
+  width: 23%;
+`;
+
 const CheckoutPage = ({ cartItems, cartTotal }) => (
   <div className="checkout-page">
     <div className="checkout-header">
       <div className="header-block">
         <span>Product</span>
       </div>
-      <div className="header-block">
+      <HeaderBlock>
         <span>Description</span>
-      </div>
+      </HeaderBlock>
       <div className="header-block">
         <span>Quantity</span>
       </div>
