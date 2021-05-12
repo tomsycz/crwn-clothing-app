@@ -55,6 +55,11 @@ export const CustomButtonContainer = styled.button`
   cursor: pointer;
   display: flex;
   justify-content: center;
+  @media screen and (max-width: 550px) {
+    padding: 0 15px;
+    min-width: 140px;
+  }
+
   &:active {
     outline: none;
   }
